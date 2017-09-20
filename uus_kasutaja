@@ -1,0 +1,18 @@
+#!/bin/bash
+#Kasutaja lisamine paroolita
+#
+clear
+#
+echo -n "Sisesta kasutajanimi: "
+read kasutajanimi
+#echo $kasutajanimi
+useradd -m $kasutajanimi
+#
+# lisame kasutaale bash shelli vaikimisi sh shelli asemele
+usermod -s /bin/bash $kasutajanimi || exit 1
+# juhuks kui on olemas spetskasutaja kodukataloogi sättes
+#cp /etc/skel/.* /home/$kasutajanimi
+#
+#ütleme, et kasutaja on loodud
+echo "$kasutajanimi on loodud."
+exit
