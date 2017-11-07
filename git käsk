@@ -1,0 +1,3 @@
+git add FAILINIMI
+git commit –m „kirjelduse lühilause“
+git push –uf REPOSITOORIUM master
